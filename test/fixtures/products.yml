@@ -1,10 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
+  id: 1
   name: Aspiradora X 2000
 
-two:
+two: 
+  id: 2
   name: Viaje a Temuco todo Pagado
 
 third:
+  id: 3
   name: Un bootcamp gratis

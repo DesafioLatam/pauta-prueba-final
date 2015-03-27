@@ -10,5 +10,9 @@ class ProductTest < ActiveSupport::TestCase
     assert !@product.valid?, "product name cannot be nil"
   end
 
-  
+  test "should have bids" do
+    assert_equal @product.bids, [bids(:two), bids(:one)]
+  end
+
+
 end

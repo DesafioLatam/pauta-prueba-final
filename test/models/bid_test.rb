@@ -5,6 +5,7 @@ class BidTest < ActiveSupport::TestCase
     @bid = bids(:one)
   end
 
+
   test "cannot bid after product expiration " do
   end
 
