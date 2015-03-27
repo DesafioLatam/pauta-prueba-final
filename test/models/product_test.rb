@@ -9,4 +9,6 @@ class ProductTest < ActiveSupport::TestCase
     @product.name = nil
     assert !@product.valid?, "product name cannot be nil"
   end
+
+  
 end

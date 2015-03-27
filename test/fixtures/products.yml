@@ -1,7 +1,10 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  name: MyString
+  name: Aspiradora X 2000
 
 two:
-  name: MyString
+  name: Viaje a Temuco todo Pagado
+
+third:
+  name: Un bootcamp gratis
