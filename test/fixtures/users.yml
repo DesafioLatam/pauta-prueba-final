@@ -5,13 +5,16 @@
 # below each fixture, per the syntax in the comments below
 #
 one:
+  id: 1
   email: productor@desafiolatam.com
 # column: value
 #
 two:
+  id: 2
   email: oferente1@desafiolatam.com
 
 third:
+  id: 3
   email: oferente2@desafiolatam.com
 
 #  column: value
