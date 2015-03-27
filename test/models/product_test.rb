@@ -13,6 +13,5 @@ class ProductTest < ActiveSupport::TestCase
   test "should have bids" do
     assert_equal @product.bids, [bids(:two), bids(:one)]
   end
-
- 
+  
 end
