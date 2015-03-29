@@ -1,5 +1,6 @@
 class BidsController < ApplicationController
   def create
+    @products = Product.all
     @product = Product.find(params[:product_id])
     @bid = Bid.new(product: @product, user: current_user)
     @bid.save
