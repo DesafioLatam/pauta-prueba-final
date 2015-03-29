@@ -1,0 +1,15 @@
+<table class="table"> 
+	<tr>
+		<th> Producto </th>
+		<th> Ganador </th>
+	</tr>
+
+<% @products.all.each do |product| %>
+	<% if product.expired? %> 
+	<tr> 
+		<td> <%= product.name %> </td>
+		<td> <%= product.winner %> </td>
+	</tr>
+	<% end %>
+<% end %>
+</table>

@@ -21,4 +21,12 @@ class Product < ActiveRecord::Base
     self.price + self.bids.count 
   end
 
+  def winner
+    if self.bids.empty?
+      return "no hay ganador"
+    else
+      return self.bids.last.user.email
+    end      
+
+  end
 end
