@@ -20,7 +20,12 @@ setInterval(function(){
 	times = $(".limit-time")
 	$.each(times, function(index, value) {
 		time = parseInt($(this).html())
-		$(this).html(time - 1)
+		new_time = time - 1
+		if (new_time <= 0)
+		{
+			new_time = 0
+		}
+		$(this).html(new_time)
 	});
 	//$(".limit-time").html(parseInt(time - 1))
 }, 1000);
