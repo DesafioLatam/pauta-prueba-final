@@ -14,3 +14,13 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+
+setInterval(function(){
+	times = $(".limit-time")
+	$.each(times, function(index, value) {
+		time = parseInt($(this).html())
+		$(this).html(time - 1)
+	});
+	//$(".limit-time").html(parseInt(time - 1))
+}, 1000);

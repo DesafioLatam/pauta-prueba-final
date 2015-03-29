@@ -1,0 +1,5 @@
+$("#products").html("<%= j render @products %>")
+if (<%= !@bid.valid? %> == true)
+{
+	$(".alert").html("No puedes agregar dos veces consecutivas o ofertar después del plazo")
+}

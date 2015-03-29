@@ -1,0 +1,29 @@
+<div class="col-md-6">
+<div class="well">
+	<div class="row">
+		<div class="col-md-4">
+		<%= image_tag (product.photo), class: "img-thumbnail" %>
+		</div>
+
+		<div class="col-md-8">
+		<h3><%= product.name %> </h3>
+		<h4> Precio: <%= product.current_price %> </h4>	
+		<p class="limit-time">
+			<%= (product.expiration_time - Time.now).seconds.to_i %>
+		</p>
+	<%= link_to "Ofertar", product_bids_path(product), method: "post", remote:true , class:"btn btn-primary" %>
+
+	<h5> Últimas ofertas </h5>
+	<ul>	
+		<% product.bids.reverse.each do |b| %>
+		<li><%= b.user.email %></li>
+		<% end %>
+	</ul>
+
+		</div>
+
+	</div>
+
+
+</div>
+</div>
