@@ -1,21 +1,2 @@
-<% @products.each do |p| %>
-	<div class="well">
-	<p>
-	<%= p.name %>
-	<span class="limit-time">
-	<%= (p.expiration_time - Time.now).seconds %>
-	</span>
-	</p>
-
-	<%= link_to "ofertar", product_bids_path(p), method: "post", remote:true  %>
-	
-	<h5> últimas ofertas </h5>
-	<ul>	
-	<% p.bids.reverse.each do |b| %>
-		<li><%= b.user.email %></li>
-	<% end %>
-	</ul>
-	</div>
-
-<% end %>
+<%= render @products %>
 

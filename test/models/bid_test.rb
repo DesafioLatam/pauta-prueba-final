@@ -12,7 +12,7 @@ class BidTest < ActiveSupport::TestCase
 
   test "cannot bid after product expiration " do
     @bid = Bid.new(product: products(:one), user:users(:three), created_at: Time.now + 3.hours)
-    assert |@bid.valid?, "cannot bid after expiration: #{@bid.errors.messages}"
+    assert !@bid.valid?, "cannot bid after expiration: #{@bid.errors.messages}"
   end
 
   test "same user cannot bid two consecutive times" do

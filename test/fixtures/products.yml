@@ -3,11 +3,17 @@
 one:
   id: 1
   name: Aspiradora X 2000
+  photo: http://cdn.20minutos.es/img/2008/03/06/776378.jpg
+  price: 1
 
 two: 
   id: 2
   name: Viaje a Temuco todo Pagado
+  photo: http://cdn.20minutos.es/img/2008/03/06/776378.jpg
+  price: 2
 
 third:
   id: 3
   name: Un bootcamp gratis
+  photo: http://cdn.20minutos.es/img/2008/03/06/776378.jpg
+  price: 1

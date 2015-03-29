@@ -1,6 +1,8 @@
 class Product < ActiveRecord::Base
   validates_presence_of :name
-  has_many :bids
+  validates_presence_of :photo
+  validates_presence_of :price
+  has_many :bids, :dependent => :destroy
 
   def expiration_time
     self.created_at + 2.hours + self.bids.count * 2.minutes
@@ -9,5 +11,6 @@ class Product < ActiveRecord::Base
   def expired?
     return Time.now >= self.expiration_time
   end
+
 
 end
