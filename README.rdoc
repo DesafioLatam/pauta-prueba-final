@@ -1,28 +1,18 @@
-== README
+Pauta prueba final DesafioLatam
+*******************************
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Un admin sube productos, esos productos tienen una duración de dos horas.
+los usuarios pueden ofertar para adquirir esos productos, al ofertar el tiempo de duración del producto aumenta en 2 minutos.
 
-Things you may want to cover:
+Cada oferta aumenta en uno el precio del producto, pasado el tiempo el último usuario que ofertó gana el producto.
 
-* Ruby version
+Un usuario no puede ofertar dos veces consecutivas sobre el mismo producto.
 
-* System dependencies
+Para probar el programa puedes correr los seeds que agregan productos a la base de datos con rake db:seeds
 
-* Configuration
+luego tienes que hacer tu propia cuenta y empezar a ofertar.
 
-* Database creation
+El panel de administrador tiene las claves por defecto
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+user: admin@example.com
+password: password
