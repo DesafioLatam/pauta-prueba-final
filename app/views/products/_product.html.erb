@@ -9,7 +9,7 @@
 		<h3><%= product.name %> </h3>
 		<h4> Precio: <%= product.current_price %> </h4>	
 		<p class="limit-time">
-			<%= (product.expiration_time - Time.now).seconds.to_i %>
+			<%= product.time_left %>
 		</p>
 	<%= link_to "Ofertar", product_bids_path(product), method: "post", remote:true , class:"btn btn-primary" %>
 

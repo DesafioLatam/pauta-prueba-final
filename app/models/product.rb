@@ -4,6 +4,11 @@ class Product < ActiveRecord::Base
   validates_presence_of :price
   has_many :bids, :dependent => :destroy
 
+  def time_left
+    left = (self.expiration_time - Time.now).seconds.to_i
+    left = 0 if left < 0  
+  end
+
   def expiration_time
     self.created_at + 2.hours + self.bids.count * 2.minutes
   end
