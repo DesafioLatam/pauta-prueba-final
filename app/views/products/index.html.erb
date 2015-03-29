@@ -1,0 +1,9 @@
+<% @products.each do |p| %>
+	<%= p.name %>
+	<span class="limit-time">
+	<%= (p.expiration_time - Time.now).seconds %>
+	</span>
+	<%= link_to "ofertar", product_bids_path(p), method: "post", remote:true  %>
+
+<% end %>
+
