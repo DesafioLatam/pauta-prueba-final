@@ -11,7 +11,9 @@ class ProductTest < ActiveSupport::TestCase
   end
 
   test "should have bids" do
-    assert_equal @product.bids, [bids(:three), bids(:two), bids(:one)]
+    products_bids = @product.bids.to_a.sort_by(&:id)
+    fixtures_bids = [bids(:one), bids(:two), bids(:three)].sort_by(&:id)
+    assert_equal products_bids, fixtures_bids
   end
   
 end
