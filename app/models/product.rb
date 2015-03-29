@@ -12,5 +12,8 @@ class Product < ActiveRecord::Base
     return Time.now >= self.expiration_time
   end
 
+  def current_price
+    self.price + self.bids.count 
+  end
 
 end
