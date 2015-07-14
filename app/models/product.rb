@@ -6,11 +6,12 @@ class Product < ActiveRecord::Base
 
   def time_left
     left = (self.expiration_time - Time.now).seconds.to_i
-    left = 0 if left < 0  
+    left = 0 if left <= 0  
+    return left
   end
 
   def expiration_time
-    self.created_at + 2.hours + self.bids.count * 2.minutes
+    created_at + 2.hours + self.bids.count * 2.minutes
   end
 
   def expired?
